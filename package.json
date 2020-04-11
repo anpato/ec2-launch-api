@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node build/app.js",
     "dev": "nodemon --config \"nodemon.json\"/",
+    "postinstall": "yarn build-ts",
     "build": "rm -rf ./build/ && tsc "
   },
   "dependencies": {
