@@ -29,7 +29,7 @@ export default class Controller {
         InstanceType: instanceType,
         KeyName: keyName,
         MinCount: 1,
-        MaxCount: Number(count),
+        MaxCount: Number(count) || 1,
         SubnetId: subnetId,
         SecurityGroupIds: sgIds,
         TagSpecifications: tags
