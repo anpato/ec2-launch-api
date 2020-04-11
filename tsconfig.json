@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "allowJs": true,
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["./src/**/*.ts", "./src/**/**.js"],
+  "exclude": ["./src/public/"]
+}
