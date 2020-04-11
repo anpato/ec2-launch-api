@@ -1,5 +1,10 @@
 # Ec2 Launch Api
 
+### Note
+
+**Your credentials do not get stored anywhere in this application.
+This api interacts with the nodejs aws-sdk directly and creates a new ec2 class instance on each request.**
+
 ### Features
 
 - Manage Ec2 Instances
