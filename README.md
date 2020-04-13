@@ -12,7 +12,7 @@ This api interacts with the nodejs aws-sdk directly and creates a new ec2 class 
 - Stop Instances
 - Delete Instances
 
-Api Base Route: `https://ec2-launch-api.herokuapp.com/`
+Api Base Route: [](`https://ec2-launch-api.herokuapp.com/`)
 
 All requests use the following header:
 
