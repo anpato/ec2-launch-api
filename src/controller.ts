@@ -38,7 +38,8 @@ export default class Controller {
       const instanceIds = Instances.map((i: any) => i.InstanceId)
       res.send({ instances: instanceIds })
     } catch (error) {
-      res.status(400).json({ error: error.message })
+      throw error
+      // res.status(400).json({ error: error.message })
     }
   }
 
@@ -57,7 +58,8 @@ export default class Controller {
         .promise()
       res.json({ status: InstanceStatuses })
     } catch (error) {
-      res.status(400).json({ error: error.message })
+      throw error
+      // res.status(400).json({ error: error.message })
     }
   }
 
@@ -76,7 +78,8 @@ export default class Controller {
         .promise()
       res.send({ details })
     } catch (error) {
-      res.status(400).json({ error: error.message })
+      throw error
+      // res.status(400).json({ error: error.message })
     }
   }
   async stopInstances(req: Request, res: Response) {
@@ -93,7 +96,8 @@ export default class Controller {
         .promise()
       res.send({ stopStatus })
     } catch (error) {
-      res.status(400).json({ error: error.message })
+      throw error
+      // res.status(400).json({ error: error.message })
     }
   }
 
@@ -111,7 +115,8 @@ export default class Controller {
         .promise()
       res.send({ destroyed })
     } catch (error) {
-      res.status(400).json({ error: error.message })
+      throw error
+      // res.status(400).json({ error: error.message })
     }
   }
 }
