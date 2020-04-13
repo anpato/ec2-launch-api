@@ -39,7 +39,7 @@ Body:
 ```js
 {
     imageId: 'ami-****',
-    instanceType: 't2-micro',
+    instanceType: 't2.micro',
     keyName: '***', //Ssh Key used to connect to instance
     subnetId: 'subnet-***',
     sgIds:['sg-****'],
