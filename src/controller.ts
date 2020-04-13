@@ -18,6 +18,7 @@ export default class Controller {
       sgIds,
       tags
     }: LaunchBody = req.body
+    console.log(req.query)
     try {
       const ec2 = new AWS.EC2({
         secretAccessKey: secretKey,
