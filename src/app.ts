@@ -1,22 +1,9 @@
-import * as express from 'express'
-import { Request, Response } from 'express'
-import * as cors from 'cors'
-import * as bodyParser from 'body-parser'
-import Router from './router'
-import * as Logger from 'morgan'
-import * as compression from 'compression'
-import * as helmet from 'helmet'
-const app = express()
+import Server from './server'
+import 'dotenv/config'
 
-app.use(cors())
-app.use(helmet())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(Logger('dev'))
-app.use(compression())
-app.use(`/api`, Router)
-app.get('/', (req: Request, res: Response) => res.json({ status: 'Live' }))
+let env = process.env.PORT
+let port = env ? parseInt(env) : 3001
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`App listening on port ${process.env.PORT || 3000}!`)
-})
+const app = new Server(port)
+
+app.initServer()

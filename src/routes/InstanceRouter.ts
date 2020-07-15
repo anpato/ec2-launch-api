@@ -1,8 +1,11 @@
 import { Router } from 'express'
 import { RouterParams } from '../interfaces'
 import Controller from '../controller'
+
 const controller = new Controller()
+
 const InstanceRouter = Router()
+
 InstanceRouter.post('/launch', controller.launchInstances)
 InstanceRouter.get('/status', controller.checkInstanceStatus)
 InstanceRouter.get('/details', controller.getInstanceDetails)
